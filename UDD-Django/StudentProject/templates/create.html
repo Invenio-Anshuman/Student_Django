@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class= " container">
+    <h1>Create Student</h1>
+<form action="/create" method='POST'>
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">ID</label>
+        <input type="text" class="form-control" id="id" name="id" placeholder="ID Here">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">Standard</label>
+        <input type="phone" class="form-control" id="std" name="std" placeholder="Standard">
+    </div> 
+
+    <div class="form-group">
+        <label for="phone">Section</label>
+        <input type="phone" class="form-control" id="sec" name="sec" placeholder="Section">
+    </div> 
+
+    <div class="form-group">
+        <label for="phone">Roll Number</label>
+        <input type="phone" class="form-control" id="roll" name="roll" placeholder="Roll Number">
+    </div> 
+    
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
+
+
+{% endblock body %}

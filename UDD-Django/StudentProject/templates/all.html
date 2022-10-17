@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h1>All Students</h1>
+<div class = "container-fluid">
+
+    <table class="table table-hover">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Standard</th>
+            <th>Section</th>
+            <th>Roll Number</th>
+        </thead>
+        {% for s in stu %}
+            <tr>
+                <td>{{s.ID}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.email}}</td>
+                <td>{{s.phone}}</td>
+                <td>{{s.std}}</td>
+                <td>{{s.sec}}</td>
+                <td>{{s.roll}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</div>
+{% endblock body %}
